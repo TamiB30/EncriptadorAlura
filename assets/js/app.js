@@ -88,6 +88,14 @@ document.addEventListener('DOMContentLoaded',function(){
     });
 
     txtAreaResultado.addEventListener('input',ocultarDiv);
+
+    txtAreaEncriptador.addEventListener('input',function(){
+        const value = this.value;
+        if(value.length > 0){
+            this.value = value.charAt(0).toLowerCase()+value.slice(1);
+        }
+    });
+    
     ocultarDiv();
 });
 
