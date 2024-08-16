@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@500&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lilita+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./assets/img/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.header{
+    background-color: #5e6cea;
+    box-shadow: 0 0 10px 5px black;
+    height: 8vh;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__h1{
+    font-size: 2.5rem;
+    font-family: "New Amsterdam", sans-serif;
+    letter-spacing: 5px;
+    color: aliceblue;
+}
+
+.contenedor{
+    display:flex;
+    flex-wrap: wrap;
+    width: auto;
+    height: 80vh;
+    min-height: 500px;
+    padding: 5% 5%;
+    gap: 2%;
+}
+
+.contenedor__encriptador{
+    background-color: #2f369ec6;
+    box-shadow: 0 0 5px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+    gap:2%;
+    outline: 1px solid yellow;
+}
+
+.contenedor__encriptador__texto{
+    background-color: #bb8bf5;
+    color: #ffffff;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-size: 1rem;
+    width: 95%;
+    height: 65%;
+    border-radius: 5px;
+    padding: 2%;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+}
+
+.contenedor__encriptador__mensaje{
+    font-family: "Teko", sans-serif;
+    color: white;
+    align-self: flex-start;
+    padding-left: 3%;
+    font-size: 1rem;
+}
+
+.contenedor__encriptador__icono{
+    color:#ff0000;
+}
+
+.contenedor__encriptador__botones{
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.contenedor__encriptador__botones__boton{
+    width: 100%;
+    font-family: "Lilita One", sans-serif;
+    color:#2f369ec6;
+    padding: 5px;
+    background-color: #da7def;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+    border: none;
+}
+
+.contenedor__encriptado{
+    background-color: #2f369ec6;
+    box-shadow: 0 0 5px 2px black;
+    outline: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 28%;
+    border-radius: 10px;
+    gap: 8px;
+}
+
+.contenedor__encriptado__mensaje{
+    font-family: "New Amsterdam", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    color: white;
+}
+
+.contenedor__encriptado__icono{
+    display: none;
+}
+
+
+/*configuracion oculto*/
+.contenedor__encriptado__resultado, .contenedor__encriptado__boton{
+    display: none;
+}
+
+.contenedor__encriptado__resultado.visible, .contenedor__encriptado__boton.visible{
+    display: block;
+}
+
+.contenedor__encriptado__mensaje.hidden{
+    display: none;
+}
+/*--------------*/
+
+/*color placeholder*/
+textarea::placeholder{
+    color:white;
+    font-family: "Lilita One", sans-serif;
+    font-size: 1rem;
+    opacity: 1;
+}
+
+.contenedor__encriptado__resultado{
+    background-color: #bb8bf5;
+    color: white;
+    font-family: "Edu VIC WA NT Beginner", cursive;
+    font-size: 1rem;
+    width: 95%;
+    height: 58%;
+    border-radius: 5px;
+    padding: 2%;
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+}
+
+.contenedor__encriptado__boton{
+    width: 95%;
+    padding: 5px;
+    font-family: "Lilita One", sans-serif;
+    color:#2f369ec6;
+    background-color: #da7def;
+    outline: 1px solid yellow;
+    border-radius: 10px;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+    transition: transform 0.2 ease;
+}
+
+button:hover{
+    background-color: #f7d2c4;
+    transform: scale(1.1);
+}
+
+button:active{
+    transform: scale(1.1);
+}
+
+/*Boton extra*/
+.floating-button {
+    font-size: 30px;
+    position: fixed;
+    top: 40%;
+    right: 10px;
+    background-color: #f7d2c4; /* Color de fondo */
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+.floating-button:hover {
+    background-color: #007bff; 
+}
+/*------------*/
+
+.footer {
+    font-family: "New Amsterdam", sans-serif;
+    background-color: #5e6cea;
+    box-shadow: 0 0 5px 2px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    height: 12vh;
+    min-height: 70px;
+    gap: 10px;
+}
+
+.footer__icono{
+    color:white;
+}
+
+.footer__icono:hover{
+    color: #faea05;
+    transform: scale(1.1);
+}
+
+@media (min-width: 750px){
+    .contenedor__encriptador__botones{
+        justify-content: space-between;
+    }
+
+    .contenedor__encriptador__botones__boton{
+        width: 48%;
+    }
+}
+
+@media (min-width: 1000px){
+    body{
+        background-image: url(./assets/img/bg-pc.png);
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .contenedor{
+        justify-content: space-between;
+        padding: 5% 5%;
+    }
+
+    .contenedor__encriptador{
+        width: 45%;
+        height: auto;
+    } 
+
+    .contenedor__encriptador__botones{
+        justify-content: space-between;
+    }
+
+    .contenedor__encriptador__botones__boton{
+        width: 48%;
+    }
+
+    .contenedor__encriptado__icono{
+        display: flex;
+        font-size: 150px;
+        line-height: 200px;
+    }
+
+    .contenedor__encriptado{
+        width: 45%;
+        height: auto;
+        gap: 15px;
+    }
+
+    .contenedor__encriptado__resultado{
+        height: 80%;
+    }
+
+    .floating-button {
+        font-size: 40px;
+        right: 30px;
+        width: 60px;
+        height: 60px;;
+    }
+}  

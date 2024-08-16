@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__h1">E•n•c•r•i•p•t•a•d•o•r</h1>
+    </header>
+    <main class="contenedor">
+        <form class="contenedor__encriptador">
+            <textarea id="txtAreaEncriptador" class="contenedor__encriptador__texto" name="" placeholder="Ingrese el texto aquí" required></textarea>
+            <p class="contenedor__encriptador__mensaje"><i class="contenedor__encriptador__icono fa-solid fa-star-exclamation fa-beat"></i> Solo letras minúsculas y sin acentos.</p>
+            <div class="contenedor__encriptador__botones">  
+                <button id="btnEncriptar" type="submit" class="contenedor__encriptador__botones__boton">Encriptar</button>
+                <button id="btnDesencriptar" type="submit" class="contenedor__encriptador__botones__boton">Desencriptar</button>
+            </div>
+        </form>
+        <button id="btn__reinicio" class="floating-button" title="Limpiar">
+            <i class="fa-duotone fa-solid fa-rotate-left fa-spin fa-spin-reverse" style="--fa-primary-color: #3700ff; --fa-secondary-color: #8904f6; --fa-secondary-opacity: 1;"></i>
+        </button>
+        <form class="contenedor__encriptado">
+            <div id="mensaje" class="contenedor__encriptado__mensaje">
+                <i class="contenedor__encriptado__icono fa-duotone fa-solid fa-face-thinking fa-bounce" style="--fa-primary-color: #0d0d0d; --fa-primary-opacity: 1; --fa-secondary-color: #f5ed05; --fa-secondary-opacity: 1;"></i>
+                <h2 class="contenedor__encriptado__h2">Ningún mensaje fue encontrado</h2>
+                <p class="contenedor__encriptado__parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+            </div>
+            <textarea id="txtAreaResultado" class="contenedor__encriptado__resultado" name="" id="" readonly></textarea>
+            <button id="btnCopiar" class="contenedor__encriptado__boton">Copiar</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer__texto">Desarrollado por Tamara B. 2024. </p> 
+        <a href="https://github.com/TamiB30" target="_blank"><i class="footer__icono fa-brands fa-github fa-2xl"></i></a>    
+    </footer>
+
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
